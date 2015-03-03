@@ -22,7 +22,7 @@ None.
 ## Usage
 
 ### CLI
-    base from to data
+    $ base from to data
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
