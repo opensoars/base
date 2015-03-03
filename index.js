@@ -23,7 +23,8 @@ function api(from, to, data){
     return Err('`' + from + '` is not a defined base');
 
   if(!bases[from].to[to])
-    return Err('`' + to + '` is not a defined base in `' + from + '`');
+    return Err('Cannot convert `' + from + '` to ' + '`' + to + '`'
+      + ', ' + '`' + to + '` is not defined');
 
   return bases[from].to[to](data);
 };

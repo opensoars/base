@@ -21,4 +21,17 @@ log('Converting from ' + from + ' to ' + to + '.');
 var base = require('./index.js'),
     api = base.api;
 
-var result = api(from, to, inp);
+
+try{
+  var result = api(from, to, inp);
+  log('Conversion successful');
+  log('- - Conversion result - -');
+  console.log(result);
+  log('- - End of conversion result - -');
+}
+catch(e){
+  log('Conversion failed, error below');
+  log(e);
+}
+
+123456789012345678901234567890
