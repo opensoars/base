@@ -27,6 +27,7 @@ None.
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
 Example:
+
     base 2 10 "0101001101010101"
 
 ### In a Node.js project
@@ -37,7 +38,8 @@ Example:
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
-Example
+Example:
+    
     base.api(10, 16, 255)
 
 #### Raw
@@ -45,7 +47,8 @@ Example
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
-Example
+Example:
+
     base[10].to[16](255)
 
 ## Tests
