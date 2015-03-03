@@ -20,4 +20,4 @@ None.
 
 
 ## API
-Incoming.
+Using it in a node project is simple: `var base = require('base');`. You can acces every base its conversion methods manualy: `base[2].to[16]('10101101);`
