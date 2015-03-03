@@ -33,5 +33,3 @@ catch(e){
   log('Conversion failed, error below');
   log(e);
 }
-
-123456789012345678901234567890
