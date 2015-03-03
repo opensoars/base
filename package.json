@@ -20,7 +20,8 @@
 
   "devDependencies": {
     "mocha": "*",
-    "istanbul": "*"
+    "istanbul": "*",
+    "coveralls": "*"
   },
 
   "repository": {
