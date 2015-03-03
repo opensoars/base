@@ -28,8 +28,8 @@ describe('api', function (){
     try{ base_api(333, 2, 1111); }
     catch(e){ assert.equal(e.message, '`333` is not a defined base'); }
   });
-  it("throws '`333` is not a defined base in `2`' if arg2 is not a defined base in base arg1", function (){
+  it("throws 'Cannot convert `2` to `333`, `333` is not defined' if arg2 is not a defined in base arg1", function (){
     try{ base_api(2, 333, 1111) }
-    catch(e){ assert.equal(e.message, '`333` is not a defined base in `2`'); }
+    catch(e){ assert.equal(e.message, 'Cannot convert `2` to `333`, `333` is not defined'); }
   });
 });
