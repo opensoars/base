@@ -22,28 +22,31 @@ None.
 ## Usage
 
 ### CLI
-`base from to data`
+    base from to data
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
-Example: `base 2 10 "0101001101010101"`
+Example:
+    base 2 10 "0101001101010101"
 
 ### In a Node.js project
-    `var base = require('base')`
+    var base = require('base')
 
 #### API
-`base.api(from, to, input)`
+    base.api(from, to, input)
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
-Example: `base.api(10, 16, 255)`
+Example
+    base.api(10, 16, 255)
 
 #### Raw
-`base[from].to[to](input)`
+    base[from].to[to](input)
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
-Example: `base[10].to[16](255)`
+Example
+    base[10].to[16](255)
 
 ## Tests
-To run all tests, cd to the project root and run `npm run local_test`.
+     npm run local_test
