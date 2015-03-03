@@ -29,7 +29,7 @@ None.
 Example: `base 2 10 "0101001101010101"`
 
 ### In a Node.js project
-`var base = require('base')`
+    `var base = require('base')`
 
 #### API
 `base.api(from, to, input)`
