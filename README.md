@@ -21,6 +21,10 @@ None.
 
 ## Usage
 
+### CLI
+`base from to data`
+
+`from` and `to` are bases to convert between and `input` is the data to convert.
 ### In a Node.js project
 `var base = require('base')`
 
@@ -37,8 +41,3 @@ Example: `base.api(10, 16, 255)`
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
 Example: `base[10].to[16](255)`
-
-### CLI
-`base from to data`
-
-`from` and `to` are bases to convert between and `input` is the data to convert.
