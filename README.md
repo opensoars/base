@@ -15,8 +15,8 @@ Base coversions.
 None.
 
 ## Install
-* Clone source
-* `npm install`
+1. Clone source
+2. `npm install`
 
 
 ## Usage
@@ -25,18 +25,20 @@ None.
 `var base = require('base')`
 
 #### API
-`base.api(from, to, input)`.
+`base.api(from, to, input)`
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
-Example: `base.api(10, 16, 255)`.
+Example: `base.api(10, 16, 255)`
 
 #### Raw
 `base[from].to[to](input)`
 
-`from` and `to` are bases to convert between and `input` is the data to convert
+`from` and `to` are bases to convert between and `input` is the data to convert.
 
 Example: `base[10].to[16](255)`
 
 ### CLI
-Incoming.
+`base from to data`
+
+`from` and `to` are bases to convert between and `input` is the data to convert.
