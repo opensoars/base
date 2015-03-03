@@ -24,16 +24,19 @@ None.
 ### In a Node.js project
 `var base = require('base')`
 
-### API
+#### API
 `base.api(from, to, input)`.
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
 Example: `base.api(10, 16, 255)`.
 
-### Raw
+#### Raw
 `base[from].to[to](input)`
 
 `from` and `to` are bases to convert between and `input` is the data to convert
 
 Example: `base[10].to[16](255)`
+
+### CLI
+Incoming.
