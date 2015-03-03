@@ -1,0 +1,31 @@
+{
+  "name": "bases",
+
+  "description": "Base coversion",
+
+  "version": "0.0.1",
+
+  "scripts": {
+    "test": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha \"./test/mocha/*.js\""
+  },
+
+  "engines" : {
+    "node" : ">=0.8"
+  },
+
+  "dependencies": {
+    
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "istanbul": "*"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensoars/bases"
+  },
+
+  "readmeFilename": "README.md"
+}
