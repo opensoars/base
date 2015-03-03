@@ -22,16 +22,18 @@ None.
 ## Usage
 
 ### In a Node.js project
-`var base = require('base');`
+`var base = require('base')`
 
 ### API
 `base.api(from, to, input)`.
 
-`from` and `to` are bases to convert between and `input` is the required input for the wanted conversion.
+`from` and `to` are bases to convert between and `input` is the data to convert.
 
-Example: `base.api(10, 16, 255);`.
+Example: `base.api(10, 16, 255)`.
 
 ### Raw
+`base[from].to[to](input)`
 
-## API
-Using it in a node project is simple: `var base = require('base');`. You can acces every base its conversion methods manualy: `base[2].to[16]('10101101');` There is an API aswell which allows a cleaner syntax: `base.api(2, 16, '10101101');`.
+`from` and `to` are bases to convert between and `input` is the data to convert
+
+Example: `base[10].to[16](255)`
