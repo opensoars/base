@@ -21,7 +21,11 @@ None.
 
 ## Usage
 
+### In a Node.js project
+`var base = require('base');`
+
 ### API
+`base.api(from, to, input)`. Where from and to are bases to convert between and input is the required input for the wanted conversion. Example: `base.api(10, 16, 255);`.
 
 ### Raw
 
