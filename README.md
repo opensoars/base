@@ -44,3 +44,6 @@ Example: `base.api(10, 16, 255)`
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
 Example: `base[10].to[16](255)`
+
+## Tests
+To run all tests, cd to the project root and run `npm run local_test`.
