@@ -25,6 +25,9 @@ None.
 `base from to data`
 
 `from` and `to` are bases to convert between and `input` is the data to convert.
+
+Example: `base 2 10 "0101001101010101"`
+
 ### In a Node.js project
 `var base = require('base')`
 
