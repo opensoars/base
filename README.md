@@ -48,7 +48,6 @@ Example:
 `from` and `to` are bases to convert between and `input` is the data to convert.
 
 Example:
-
     base[10].to[16](255)
 
 ## Tests
