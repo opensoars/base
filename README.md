@@ -15,7 +15,8 @@ Base coversion
 None.
 
 ## Install
-Clone source.
+* Clone source
+* `npm install`
 
 
 ## API
