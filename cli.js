@@ -18,12 +18,12 @@ if(!inp) Err('Base CLI requires data to convert as argument 3');
 
 log('Converting from ' + from + ' to ' + to + '.');
 
-var base = require('./index.js'),
-    api = base.api;
+// Require base if we're ready to run it
+var base = require('./index.js');
 
 
 try{
-  var result = api(from, to, inp);
+  var result = base.api(from, to, inp);
   log('Conversion successful');
   log('- - Conversion result - -');
   console.log(result);
