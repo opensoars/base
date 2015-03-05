@@ -1,2 +1,4 @@
 node_modules/
 coverage/
+addons/node_modules/
+addons/build/
