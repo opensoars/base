@@ -1,3 +1,5 @@
 #!/bin/bash
 
-node ./../cli.js "$@"
+script_dir=$(dirname $0)
+
+node $script_dir/../cli.js "$@"

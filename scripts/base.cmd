@@ -1,3 +1,6 @@
 @ECHO OFF
 
-node ./../cli.js %*
+node %~dp0/../cli.js %*
+
+
+ECHO 
