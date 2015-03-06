@@ -1,0 +1,14 @@
+{
+  "name": "math",
+  "version": "0.0.0",
+  "description": "Math test",
+  "main": "math.js",
+
+  "scripts": {
+  },
+
+  "gypfile": true,
+  "dependencies": {
+    "bindings": "~1.2.1"
+  }
+}
