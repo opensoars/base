@@ -1,0 +1,1 @@
+module.exports = require('./b2.js');
