@@ -47,10 +47,8 @@ void B10(const v8::FunctionCallbackInfo<Value>& args){
     String::Utf8Value js_str(args[0]);
     const char* str = *js_str;
 
-    cout << "str: " << str << endl;
-
-    //Local<Number> js_b10 = Number::New(isolate, strToB10(str));
-    //args.GetReturnValue().Set(js_b10);
+    Local<Number> js_b10 = Number::New(isolate, strToB10(str));
+    args.GetReturnValue().Set(js_b10);
   }
   else{
 
