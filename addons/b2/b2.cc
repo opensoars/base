@@ -69,11 +69,11 @@ void B10(const v8::FunctionCallbackInfo<Value>& args){
     int var = 25;
     int* var_pointer = &var;
     cout << "var_pointer: " << var_pointer << "\n";
-*/
 
     int var = 25;
     int* var_pointer = &var;
     arrToB10(var_pointer);
+*/
 
     int t;
     for(int i = 0; i < length; i++){
