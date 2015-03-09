@@ -7,8 +7,5 @@
   "scripts": {
   },
 
-  "gypfile": true,
-  "dependencies": {
-    "bindings": "~1.2.1"
-  }
+  "gypfile": true
 }

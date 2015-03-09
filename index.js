@@ -45,6 +45,10 @@ module.exports = exports;
 
 Dev notes, also some benchmark stuff which will be used in some tests later on
 
+
+base[2][10]();
+
+
 var result1 = api(64, 'ascii', api('ascii', 64, 'pleasure.'));
 var result2 = api(64, 'ascii', api('ascii', 64, 'leasure.'));
 var result3 = api(64, 'ascii', api('ascii', 64, 'easure.'));
