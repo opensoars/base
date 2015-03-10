@@ -5,6 +5,7 @@ var base = require('./../../index.js'),
 
 
 describe('api', function (){
+
   it("returns {int}15 if arg1={int}2, arg2={int}10, arg3={int}1111", function (){
     assert.equal(base_api(2, 10, 1111), 15);
   });
@@ -32,4 +33,5 @@ describe('api', function (){
     try{ base_api(2, 333, 1111) }
     catch(e){ assert.equal(e.message, 'Cannot convert `2` to `333`, `333` is not defined'); }
   });
+  
 });
