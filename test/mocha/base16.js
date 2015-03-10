@@ -6,7 +6,7 @@ var base = require('./../../index.js'),
 
 describe('base16', function (){
 
-  describe('2', function (){
+  describe('base2', function (){
     it('returns {string}11111111 when arg1={string}ff', function (){
       assert.equal(base16[2]('ff'), '11111111');
     });

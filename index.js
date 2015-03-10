@@ -38,6 +38,7 @@ exports.api = api;
 module.exports = exports;
 
 
+console.log(base[2]);
 
 
 
