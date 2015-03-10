@@ -18,7 +18,7 @@ function Err(msg){
  * @param from {str|num}        
  * @param to   {str|num}        
  * @param data {Uint8|str|num}  
- * @param impl {string}         Which implementation to use (js, cpp)
+ * @param impl {string}         Implementation to use (js, cpp, etc)
  */
 function api(from, to, data, impl){
   if(!from) return Err('expected a base as arg1');
@@ -46,8 +46,8 @@ for(var base in bases)
 
 exports.api = api;
 
+// Expose exports object
 module.exports = exports;
-
 
 
 
