@@ -56,6 +56,6 @@ Example:
     base[10].to[16](255)
 
 
-## Tests
+## Tests and coverage information
      npm run local_test
      
