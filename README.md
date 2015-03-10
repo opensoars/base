@@ -37,17 +37,16 @@ Example:
 #### API
     base.api(from, to, input, implementation)
 
-`from` and `to` are bases to convert between, `input` is the data to convert `implementation` is a known implementation (js, cpp). `from`, `to` and `data` are required. `implementation` is optional, defaults to cpp.
-
+`from` and `to` are bases to convert between, `input` is the data to convert and `implementation` is a known implementation (js, cpp). `from`, `to` and `data` are required. `implementation` is optional, defaults to cpp.
 
 Example:
     
     base.api(10, 16, 255, 'js')
 
 #### Raw
-    base[from].to[to](input)
+    base[from][implementation][to](input)
 
-`from` and `to` are bases to convert between and `input` is the data to convert.
+`from` and `to` are bases to convert between, `input` is the data to convert.
 
 Example:
 
