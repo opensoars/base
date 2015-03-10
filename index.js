@@ -25,7 +25,6 @@ function api(from, to, data, impl){
   if(!to)   return Err('expected a base as arg2');
   if(!data) return Err('expected data as arg3');
 
-  // FIX SOME STUFF WITH THIS NEW API
   impl = impl || 'cpp';
 
   if(!bases[from])
@@ -41,8 +40,6 @@ function api(from, to, data, impl){
   return bases[from][impl][to](data);
 };
 
-console.log(api(2, 10, 1111, 'cpp'));
-//console.log(bases[2].cpp.b10('1001'));
 
 for(var base in bases)
   exports[base] = bases[base];
@@ -60,6 +57,9 @@ module.exports = exports;
 
 Dev notes, also some benchmark stuff which will be used in some tests later on
 
+
+console.log(api(2, 10, 1111, 'cpp'));
+console.log(bases[2].cpp.b10('1001'));
 
 base[2][10]();
 
