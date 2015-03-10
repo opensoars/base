@@ -21,8 +21,7 @@
   "devDependencies": {
     "mocha": "*",
     "istanbul": "*",
-    "coveralls": "*",
-    "bindings": "*"
+    "coveralls": "*"
   },
 
   "repository": {
