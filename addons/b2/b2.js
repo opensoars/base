@@ -1,6 +1,6 @@
 var b2 = require('./../../node_modules/bindings')('b2');
 
-var str_inp = '111111111111111111111111',
+var str_inp = '10111101',
     arr_inp = new Uint8Array( str_inp.split('') );
 
 /*
@@ -20,3 +20,5 @@ for(i=0; i<conversions; i+=1)
 console.timeEnd('arr');
 */
 
+
+console.log('b2.b16(str_inp):', b2.b16(str_inp));
