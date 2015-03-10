@@ -29,7 +29,7 @@ None.
 
 Example:
 
-    base 2 10 "0101001101010101" js
+    $ base 2 10 "0101001101010101" js
 
 
 ### In a Node.js project

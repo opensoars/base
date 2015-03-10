@@ -37,4 +37,12 @@ catch(e){
 }
 
 
+/**
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * LETS MAKE THE CLI OUTPUT CONFIGURABLE
+ * just raw output, and pretty printed output
+ * LETS MAKE THE CLI OUTPUT CONFIGURABLE
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
+
 

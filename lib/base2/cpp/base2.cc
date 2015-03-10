@@ -35,6 +35,7 @@ void B10(const v8::FunctionCallbackInfo<Value>& args){
 
     int byte_len = array->Get(
         String::NewFromUtf8(isolate, "byteLength"))->Uint32Value();
+    
     for(i = (byte_len-1), p = 0; i > -1; i--, p++)
       b10 += array->Get(i)->Uint32Value() * pow(2, p);
   }
