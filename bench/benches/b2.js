@@ -2,7 +2,7 @@ module.exports = function (base){
   var base2 = base[2];
 
 
-  var byte_255_str = '11111111';
+  var byte_255_str = 11111111;
 
   var code = "\n"
     + "for(var i = 0; i < 500000; i++)\n"
@@ -30,3 +30,14 @@ module.exports = function (base){
   console.log('\ntakes', new Date().getTime() - start + 'ms\n');
 
 }
+
+
+/**
+
+loop 50000
+  base2.base10('11111111')
+
+js: 0ms
+cpp: 0ms
+
+*/
