@@ -31,6 +31,9 @@ function api(from, to, data, impl){
   if(!bases[from])
     return Err('`' + from + '` is not a defined base');
 
+  if(!bases[from][impl])
+    return Err('Implementation `' + impl + '` is not defined');
+
   if(!bases[from][impl][to])
     return Err('Cannot convert `' + from + '` to `' + to + '`'
       + ', ' + '`' + to + '` is not defined');
@@ -38,7 +41,7 @@ function api(from, to, data, impl){
   return bases[from][impl][to](data);
 };
 
-//base(2, 10, '1111')
+console.log(api(2, 10, 1111, 'cpp'));
 //console.log(bases[2].cpp.b10('1001'));
 
 for(var base in bases)

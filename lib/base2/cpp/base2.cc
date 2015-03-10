@@ -22,8 +22,8 @@ void B10(const v8::FunctionCallbackInfo<Value>& args){
 
   int i;
 
-  if(args[0]->IsString()){
-
+  if(args[0]->IsString() || args[0]->IsNumber()){
+    // Converts from string|number
     String::Utf8Value js_str(args[0]);
     const char* b2 = *js_str;
 
@@ -47,14 +47,14 @@ void B16(const v8::FunctionCallbackInfo<Value>& args){
   Isolate* isolate = Isolate::GetCurrent();
   HandleScope scope(isolate);
 
-  String::Utf8Value js_str (args[0]);
+  String::Utf8Value js_str(args[0]);
   const char* b2 = *js_str;
   std::string b2_str = b2;
   std::string empty_bit = "0";
   std::string b16 = "";
   std::string half_byte = "";
 
-  // Iterators
+             // Iterators
   int p_i,   // prefix
       s_i,   // string
       h_b_i, // half_byte
