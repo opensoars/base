@@ -38,7 +38,7 @@ exports.api = api;
 module.exports = exports;
 
 
-console.log(base[2]);
+console.log(bases[2].cpp.b10('1001'));
 
 
 

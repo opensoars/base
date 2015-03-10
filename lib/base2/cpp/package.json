@@ -5,7 +5,7 @@
   "main": "index.js",
 
   "dependencies": {
-    "bindings": 
+    "bindings": "*"
   },
 
   "scripts": {

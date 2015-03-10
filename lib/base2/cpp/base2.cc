@@ -18,8 +18,9 @@ void B10(const v8::FunctionCallbackInfo<Value>& args){
   HandleScope scope(isolate);
 
   unsigned int b10 = 0,
-      p,
-      i;
+      p;
+
+  int i;
 
   if(args[0]->IsString()){
 
