@@ -25,7 +25,7 @@ None.
 ### CLI
     $ base from to data implementation
 
-`from` and `to` are bases to convert between, `input` is the data to convert and implementation is a known implementation (js, cpp).
+`from` and `to` are bases to convert between, `input` is the data to convert and `implementation` is a known implementation (js, cpp). `from`, `to` and `data` are required. `implementation` is optional, defaults to cpp.
 
 Example:
 
