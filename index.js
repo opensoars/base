@@ -25,17 +25,21 @@ function api(from, to, data, impl){
   if(!to)   return Err('expected a base as arg2');
   if(!data) return Err('expected data as arg3');
 
+  // FIX SOME STUFF WITH THIS NEW API
+  impl = impl || 'cpp';
+
   if(!bases[from])
     return Err('`' + from + '` is not a defined base');
 
-  if(!bases[from][to])
+  if(!bases[from][impl][to])
     return Err('Cannot convert `' + from + '` to `' + to + '`'
       + ', ' + '`' + to + '` is not defined');
 
-  return bases[from][to](data);
+  return bases[from][impl][to](data);
 };
 
-base(2, 10, '1111')
+//base(2, 10, '1111')
+//console.log(bases[2].cpp.b10('1001'));
 
 for(var base in bases)
   exports[base] = bases[base];
@@ -45,7 +49,7 @@ exports.api = api;
 module.exports = exports;
 
 
-console.log(bases[2].cpp.b10('1001'));
+
 
 
 

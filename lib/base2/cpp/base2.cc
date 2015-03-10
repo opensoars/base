@@ -85,10 +85,10 @@ void B16(const v8::FunctionCallbackInfo<Value>& args){
 void Init(Handle<Object> exports) {
   Isolate* isolate = Isolate::GetCurrent();
 
-  exports->Set(String::NewFromUtf8(isolate, "b10"),
+  exports->Set(String::NewFromUtf8(isolate, "10"),
       FunctionTemplate::New(isolate, B10)->GetFunction());
 
-  exports->Set(String::NewFromUtf8(isolate, "b16"),
+  exports->Set(String::NewFromUtf8(isolate, "16"),
       FunctionTemplate::New(isolate, B16)->GetFunction());
 }
 
