@@ -31,8 +31,10 @@ Example:
 
     base 2 10 "0101001101010101" js
 
+
 ### In a Node.js project
     base = require('base')
+
 
 #### API
     base.api(from, to, input, implementation)
@@ -43,10 +45,11 @@ Example:
     
     base.api(10, 16, 255, 'js')
 
+
 #### Raw
     base[from][implementation][to](input)
 
-`from` and `to` are bases to convert between, `input` is the data to convert.
+`from` and `to` are bases to convert between, `input` is the data to convert and `implementation` is a known implementation (js, cpp). `from`, `to` and `data` are required. `implementation` is optional, defaults to cpp.
 
 Example:
 
