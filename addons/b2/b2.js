@@ -1,5 +1,7 @@
 var b2 = require('./../../node_modules/bindings')('b2');
 
+
+
 var str_inp = '10111101',
     arr_inp = new Uint8Array( str_inp.split('') );
 
