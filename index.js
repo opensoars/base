@@ -14,7 +14,13 @@ function Err(msg){
   throw new Error(msg);
 }
 
-function api(from, to, data){
+/**
+ * @param from {str|num}        
+ * @param to   {str|num}        
+ * @param data {Uint8|str|num}  
+ * @param impl {string}         Which implementation to use (js, cpp)
+ */
+function api(from, to, data, impl){
   if(!from) return Err('expected a base as arg1');
   if(!to)   return Err('expected a base as arg2');
   if(!data) return Err('expected data as arg3');
@@ -29,6 +35,7 @@ function api(from, to, data){
   return bases[from][to](data);
 };
 
+base(2, 10, '1111')
 
 for(var base in bases)
   exports[base] = bases[base];
