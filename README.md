@@ -12,7 +12,7 @@ Base coversions.
 
 
 ## Dependencies (update with cpp)
-None.
+* To use the C++ implementations you will need a C(++) compiler toolchain installed.
 
 
 ## Install
