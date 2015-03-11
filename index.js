@@ -25,7 +25,7 @@ function api(from, to, data, impl){
   if(!to)   return Err('expected a base as arg2');
   if(!data) return Err('expected data as arg3');
 
-  impl = impl || 'cpp';
+  impl = impl || 'js';
 
   if(!bases[from])
     return Err('`' + from + '` is not a defined base');
