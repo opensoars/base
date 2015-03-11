@@ -22,7 +22,7 @@ Base coversions.
 ## Install
 1. Clone source
 2. `npm install`
-3. To use C++ implementations: `npm run build_addons`
+3. To use C++ implementations: `npm run build`
 
 
 ## Usage

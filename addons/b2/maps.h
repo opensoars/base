@@ -1,1 +1,0 @@
-const char* MAP16 = "0123456789abcdef";
