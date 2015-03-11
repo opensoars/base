@@ -27,7 +27,7 @@ describe('base16', function (){
     });
     it('returns {int}16777215 when arg1={string}ffffff', function (){
       assert.equal(base16[10]('ffffff'), 16777215);
-    })
+    });
   });
 
 });
