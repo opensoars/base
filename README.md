@@ -54,11 +54,11 @@ Example:
 #### Raw
     base[from][implementation][to](input)
 
-`from` and `to` are bases to convert between, `input` is the data to convert and `implementation` is a known implementation (js, cpp). `from`, `to` and `data` are required. `implementation` is optional, defaults to cpp.
+`from` and `to` are bases to convert between, `input` is the data to convert and `implementation` is a known implementation (js, cpp).
 
 Example:
 
-    base[10].to[16](255)
+    base[10]['cpp'][16](255)
 
 
 ## Tests and coverage information
