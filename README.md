@@ -11,13 +11,18 @@ Base coversions.
 ---
 
 
-## Dependencies (update with cpp)
-* To use the C++ implementations you will need a C(++) compiler toolchain installed.
+## Dependencies
+* JS implementation
+    - Node.js
+* C++ Implementation
+    - C++ compiler toolchain
+    - node-gyp
 
 
 ## Install
 1. Clone source
 2. `npm install`
+3. To use C++ implementations: `npm build_addons`
 
 
 ## Usage
