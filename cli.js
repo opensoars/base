@@ -17,8 +17,8 @@ if(!from) Err('Base CLI requires a base to convert from as argument 1');
 if(!to) Err('Base CLI requires a base to convert to as argument 2');
 if(!inp) Err('Base CLI requires data to convert as argument 3');
 
-log('Converting from ' + from + ' to ' + to + '');
-log('Implementation: ' + (impl ? impl : 'js'));
+log('Converting from ' + from + ' to ' + to
+    + ' using ' + (impl ? impl : 'js'));
 
 // Require base if we're ready to run it
 var base = require('./index.js');

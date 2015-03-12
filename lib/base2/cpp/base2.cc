@@ -45,38 +45,54 @@ void B10(const v8::FunctionCallbackInfo<Value>& args){
 
 
 void B16(const v8::FunctionCallbackInfo<Value>& args){
+
   Isolate* isolate = Isolate::GetCurrent();
   HandleScope scope(isolate);
 
-  String::Utf8Value js_str(args[0]);
-  const char* b2 = *js_str;
-  std::string b2_str = b2;
   std::string empty_bit = "0";
   std::string b16 = "";
-  std::string half_byte = "";
 
-             // Iterators
-  int p_i,   // prefix
-      s_i,   // string
-      h_b_i, // half_byte
-      b_i;   // bit
- 
-  int p,
+  if(args[0]->IsString() || args[0]->IsNumber()){
+    String::Utf8Value js_str(args[0]);
+    const char* b2 = *js_str;
+    std::string b2_str = b2;
+    std::string half_byte = "";
+
+               // Iterators
+    int p_i,   // prefix
+        s_i,   // string
+        h_b_i, // half_byte
+        b_i;   // bit
+   
+    int p,
+        b10 = 0;
+
+    // Prefix with 0's so we can split by 4
+    if(strlen(b2)%4 != 0)
+      for(p_i = 0; p_i<(4-strlen(b2)%4); p_i++)
+        b2_str = empty_bit + b2_str;
+
+    for(s_i=0; s_i < b2_str.length(); s_i+=4){
+      half_byte = b2_str.substr(s_i, 4);
+
       b10 = 0;
+      for(h_b_i = 3, p = 0; h_b_i > -1; h_b_i--, p++)
+        b10 += (half_byte[h_b_i] - 48) * pow(2, p);
 
-  // Prefix with 0's so we can split by 4
-  if(strlen(b2)%4 != 0)
-    for(p_i = 0; p_i<(4-strlen(b2)%4); p_i++)
-      b2_str = empty_bit + b2_str;
+      b16 = b16 + MAP16[b10];
+    }
+  }
+  else if(args[0]->IsObject()){
+    Local<Object> array = args[0]->ToObject();
 
-  for(s_i=0; s_i < b2_str.length(); s_i+=4){
-    half_byte = b2_str.substr(s_i, 4);
+    int byte_len = array->Get(
+        String::NewFromUtf8(isolate, "byteLength"))->Uint32Value(); 
 
-    b10 = 0;
-    for(h_b_i = 3, p = 0; h_b_i > -1; h_b_i--, p++)
-      b10 += (half_byte[h_b_i] - 48) * pow(2, p);
+    int i;
 
-    b16 = b16 + MAP16[b10];
+    for(i = 0; i < byte_len; i+=4){
+      cout << i << endl;
+    }
   }
 
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, b16.c_str()));

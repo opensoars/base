@@ -22,20 +22,31 @@ describe('api', function (){
     });
   });
 
-  describe('cpp', function (){
-    it("returns {int}15 if arg1={int}2, arg2={int}10, arg3={int}1111", function (){
-      assert.equal(api(2, 10, 1111, 'cpp'), 15);
+
+
+  if(base[2].cpp){
+    describe('cpp', function (){
+      it("returns {int}15 if arg1={int}2, arg2={int}10, arg3={int}1111", function (){
+        assert.equal(api(2, 10, 1111, 'cpp'), 15);
+      });
+      it("returns {int}255 if arg1={int}2, arg2={int}10, arg3={int}11111111", function (){
+        assert.equal(api(2, 10, 11111111, 'cpp'), 255);
+      });
+      it("returns {int}15 if arg1={int}2, arg2={int}10, arg3={string}1111", function (){
+        assert.equal(api(2, 10, '1111', 'cpp'), 15);
+      });
+      it("returns {int}255 if arg1={int}2, arg2={int}10, arg3={string}11111111", function (){
+        assert.equal(api(2, 10, '11111111', 'cpp'), 255);
+      });
     });
-    it("returns {int}255 if arg1={int}2, arg2={int}10, arg3={int}11111111", function (){
-      assert.equal(api(2, 10, 11111111, 'cpp'), 255);
+  }
+  else{
+    describe('cpp', function (){
+      it('sets cpp implementation to undefined when C++ isnt compiled', function (){
+        assert.equal(base[2].cpp, undefined);
+      });
     });
-    it("returns {int}15 if arg1={int}2, arg2={int}10, arg3={string}1111", function (){
-      assert.equal(api(2, 10, '1111', 'cpp'), 15);
-    });
-    it("returns {int}255 if arg1={int}2, arg2={int}10, arg3={string}11111111", function (){
-      assert.equal(api(2, 10, '11111111', 'cpp'), 255);
-    });
-  });
+  }
 
   it("throws 'expected a base as arg1' if arg1=undefined", function (){
     try{ api(); }

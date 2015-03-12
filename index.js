@@ -50,6 +50,10 @@ exports.api = api;
 module.exports = exports;
 
 
+console.log(
+  api( 2, 16, new Uint8Array('1111'.split('')), 'cpp' )
+);
+
 
 
 
