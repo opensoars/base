@@ -1,24 +1,20 @@
-#include <node.h>
-#include <v8.h>
 #include <nan.h>
-#include <iostream>
-#include <string>
-#include <stdio.h>
-
-#include "pow.h"
-#include "maps.h"
 
 using namespace v8;
-using namespace std;
 
-/**
- * LETS USE nan v8 framework!
- */
+NAN_METHOD(Method) {
+  NanScope();
+  NanReturnValue(NanNew("world"));
+}
+
+void Init(Handle<Object> exports) {
+  exports->Set(NanNew("hello"), NanNew<FunctionTemplate>(Method)->GetFunction());
+}
+
+NODE_MODULE(b2, Init)
 
 
-/**
- * B10 JS API
- */
+/*
 void B10(const v8::FunctionCallbackInfo<Value>& args){
   Isolate* isolate = Isolate::GetCurrent();
   HandleScope scope(isolate);
@@ -130,3 +126,4 @@ void Init(Handle<Object> exports) {
 }
 
 NODE_MODULE(b2, Init)
+*/
