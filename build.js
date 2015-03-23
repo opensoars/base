@@ -3,7 +3,6 @@ var fs = require('fs');
 var exec = require('child_process').exec;
 
 
-
 function Err(msg, err){
   var err_str = 'build error\n'
     + (msg ? msg + '\n' : '')
@@ -22,11 +21,11 @@ function build(dir){
     + ' && npm install';
   
   exec(commands, function (err, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
-    if(err){
-      console.log('exec error: ' + err);
-    }
+    if(err)
+      console.log('--- exec error ---\n' + err + '--- end exec error ---');
+
+    console.log('--- stdout ---\n' + stdout + '--- end stdout ---');
+    console.log('--- stderr ---\n' + stderr + '--- end stderr ---');
   });
 }
 
