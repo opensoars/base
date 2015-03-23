@@ -15,9 +15,11 @@ function Err(msg){
 }
 
 /**
- * @param from {str|num}        
- * @param to   {str|num}        
- * @param data {Uint8|str|num}  
+ * Since the API implementation is so simple, it's included in index.js
+ *
+ * @param from {str|num}
+ * @param to   {str|num}
+ * @param data {Uint8|str|num}
  * @param impl {string}         Implementation to use (js, cpp, etc)
  */
 function api(from, to, data, impl){
@@ -48,12 +50,6 @@ exports.api = api;
 
 // Expose exports object
 module.exports = exports;
-
-
-console.log(
-  api( 2, 16, new Uint8Array('1111'.split('')), 'cpp' )
-);
-
 
 
 

@@ -2,6 +2,7 @@
 #include <v8.h>
 #include <iostream>
 #include <string>
+#include <stdio.h>
 
 #include "pow.h"
 #include "maps.h"
@@ -88,10 +89,24 @@ void B16(const v8::FunctionCallbackInfo<Value>& args){
     int byte_len = array->Get(
         String::NewFromUtf8(isolate, "byteLength"))->Uint32Value(); 
 
-    int i;
+    int half_byte[3];
 
-    for(i = 0; i < byte_len; i+=4){
-      cout << i << endl;
+    int i,
+        h_i,   // half_iterator
+        b2_p;  // base2 power
+
+    int b10;
+
+    // Iterate through bits by 4 to get half bytes
+    for(i = byte_len-1; i > -1; i-=4){
+      b10 = 0; // Reset b10 for each half byte iteration
+
+      // Get half byte OR get 4 bit b10 value
+      for(h_i = i, b2_p = 0; h_i > i-4; h_i--, b2_p++){
+        if(h_i < 0) break;
+        b10 += array->Get(h_i)->Uint32Value() * pow(2, b2_p);
+      }
+      b16 = MAP16[b10] + b16;
     }
   }
 

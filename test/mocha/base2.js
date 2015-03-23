@@ -70,7 +70,6 @@ describe('base2', function (){
         });
       });
 
-
       describe('base16', function (){
         it('returns {string}ff when arg1={string}11111111', function (){
           assert.equal(base2[16]('11111111'), 'ff');
