@@ -1,20 +1,46 @@
 #include <nan.h>
 
-using namespace v8;
+#include <iostream>
+#include <string>
+#include <stdio.h>
 
-NAN_METHOD(Method) {
+#include "pow.h"
+#include "maps.h"
+
+using namespace v8;
+using namespace std;
+
+/**
+ * ! Leggo !
+ */
+NAN_METHOD(B10) {
   NanScope();
+  cout << "COOL" << endl;
   NanReturnValue(NanNew("world"));
 }
 
 void Init(Handle<Object> exports) {
-  exports->Set(NanNew("hello"), NanNew<FunctionTemplate>(Method)->GetFunction());
+  exports->Set(NanNew("b10"), NanNew<FunctionTemplate>(B10)->GetFunction());
 }
 
 NODE_MODULE(b2, Init)
 
 
 /*
+
+#include <nan.h>
+
+#include <iostream>
+#include <string>
+#include <stdio.h>
+
+#include "pow.h"
+#include "maps.h"
+
+using namespace v8;
+using namespace std;
+
+
 void B10(const v8::FunctionCallbackInfo<Value>& args){
   Isolate* isolate = Isolate::GetCurrent();
   HandleScope scope(isolate);
