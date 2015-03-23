@@ -1,5 +1,6 @@
 #include <node.h>
 #include <v8.h>
+#include <nan.h>
 #include <iostream>
 #include <string>
 #include <stdio.h>
@@ -9,6 +10,10 @@
 
 using namespace v8;
 using namespace std;
+
+/**
+ * LETS USE nan v8 framework!
+ */
 
 
 /**
