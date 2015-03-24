@@ -10,17 +10,100 @@
 using namespace v8;
 using namespace std;
 
-/**
- * ! Leggo !
- */
-NAN_METHOD(B10) {
+
+NAN_METHOD(B10){
   NanScope();
-  cout << "COOL" << endl;
-  NanReturnValue(NanNew("world"));
+
+  unsigned int b10 = 0,
+      p;
+
+  int i;
+
+  if(args[0]->IsString() || args[0]->IsNumber()){
+    cout << "string | number" << endl;
+    NanUtf8String js_str(args[0]);
+    const char* b2 = *js_str;
+
+    for(i = (strlen(b2) - 1), p = 0; i > -1; i--, p++)
+      b10 += (b2[i] - 48) * pow(2, p);
+  }
+  else if(args[0]->IsObject()){
+    Local<Object> array = args[0]->ToObject();
+  }
+
+  cout << "b10: " << b10 << endl;
+
+  NanReturnValue(NanNew(b10));
 }
 
+NAN_METHOD(B16){
+  NanScope();
+
+  std::string empty_bit = "0";
+  std::string b16 = "";
+
+  if(args[0]->IsString() || args[0]->IsNumber()){
+    NanUtf8String js_str(args[0]);
+    const char* b2 = *js_str;
+    std::string b2_str = b2;
+    std::string half_byte = "";
+
+               // Iterators
+    int p_i,   // prefix
+        s_i,   // string
+        h_b_i, // half_byte
+        b_i;   // bit
+
+    int p,
+        b10 = 0;
+
+    // Prefix with 0's so we can split by 4
+    if(strlen(b2)%4 != 0)
+      for(p_i = 0; p_i<(4-strlen(b2)%4); p_i++)
+        b2_str = empty_bit + b2_str;
+
+    for(s_i=0; s_i < b2_str.length(); s_i+=4){
+      half_byte = b2_str.substr(s_i, 4);
+
+      b10 = 0;
+      for(h_b_i = 3, p = 0; h_b_i > -1; h_b_i--, p++)
+        b10 += (half_byte[h_b_i] - 48) * pow(2, p);
+
+      b16 = b16 + MAP16[b10];
+    }
+
+  }
+  else if(args[0]->IsObject()){
+    Local<Object> array = args[0]->ToObject();
+    int byte_len = array->Get(
+        NanNew("byteLength"))->Uint32Value();
+
+    int i,
+        h_i,   // half (byte) iterator
+        b2_p;  // base2 power
+
+    int b10;
+
+    // Iterate through bits by 4 to get half bytes
+    for(i = byte_len-1; i > -1; i-=4){
+      b10 = 0; // Reset b10 for each half byte iteration
+
+      // Get half byte OR get 4 bit b10 value
+      for(h_i = i, b2_p = 0; h_i > i-4; h_i--, b2_p++){
+        if(h_i < 0) break;
+        b10 += array->Get(h_i)->Uint32Value() * pow(2, b2_p);
+      }
+      b16 = MAP16[b10] + b16;
+    }
+  }
+
+  NanReturnValue(NanNew(b16));
+}
+
+
 void Init(Handle<Object> exports) {
-  exports->Set(NanNew("b10"), NanNew<FunctionTemplate>(B10)->GetFunction());
+  exports->Set(NanNew("10"), NanNew<FunctionTemplate>(B10)->GetFunction());
+  exports->Set(NanNew("16"), NanNew<FunctionTemplate>(B16)->GetFunction());
 }
 
 NODE_MODULE(b2, Init)
