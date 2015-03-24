@@ -20,19 +20,15 @@ NAN_METHOD(B10){
   int i;
 
   if(args[0]->IsString() || args[0]->IsNumber()){
-    cout << "string | number" << endl;
     NanUtf8String js_str(args[0]);
     const char* b2 = *js_str;
 
     for(i = (strlen(b2) - 1), p = 0; i > -1; i--, p++)
       b10 += (b2[i] - 48) * pow(2, p);
   }
-  else if(args[0]->IsObject()){
+  else if(args[0]->IsObject())
     Local<Object> array = args[0]->ToObject();
-  }
-
-  cout << "b10: " << b10 << endl;
-
+  
   NanReturnValue(NanNew(b10));
 }
 
@@ -110,6 +106,8 @@ NODE_MODULE(b2, Init)
 
 
 /*
+
+old node 0.12 implementation
 
 #include <nan.h>
 
