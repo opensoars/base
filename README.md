@@ -13,10 +13,10 @@ Base coversions.
 
 ## Dependencies
 * JS implementation
-    - Node.js
+    - [Node.js](https://nodejs.org/)
 * C++ Implementation
     - C++ compiler toolchain
-    - node-gyp
+    - [node-gyp](https://github.com/TooTallNate/node-gyp)
     - Node.js modules
         + [nan](https://github.com/rvagg/nan)
         + [node-bindings](https://github.com/TooTallNate/node-bindings)
