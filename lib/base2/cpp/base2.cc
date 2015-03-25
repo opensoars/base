@@ -27,17 +27,12 @@ NAN_METHOD(B10){
       b10 += (b2[i] - 48) * pow(2, p);
   }
   else if(args[0]->IsObject()){
-    /*
-     ! Fix using nan
-
     Local<Object> array = args[0]->ToObject();
 
-    int byte_len = array->Get(
-        String::NewFromUtf8(isolate, "byteLength"))->Uint32Value();
+    int byte_len = array->Get(NanNew("byteLength"))->Uint32Value();
     
     for(i = (byte_len-1), p = 0; i > -1; i--, p++)
       b10 += array->Get(i)->Uint32Value() * pow(2, p);
-    */
   }
   
   NanReturnValue(NanNew(b10));

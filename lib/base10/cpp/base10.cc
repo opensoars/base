@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <stdio.h>
 #include <math.h>
 
@@ -19,12 +20,9 @@ NAN_METHOD(B2){
   string new_b2 = "";
 
   while(b10 != 0){
+    b2 = static_cast<ostringstream*>(
+        &(ostringstream() << b10 % 2) )->str() + b2;
 
-    new_b2 += (b10 % 2);
-    new_b2 += b2;
-
-
-    b2 = new_b2;
     b10 = floor(b10 / 2);
   }
 
