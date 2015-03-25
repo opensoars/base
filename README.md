@@ -17,6 +17,9 @@ Base coversions.
 * C++ Implementation
     - C++ compiler toolchain
     - node-gyp
+    - Node.js modules
+        + [nan](https://github.com/rvagg/nan)
+        + [node-bindings](https://github.com/TooTallNate/node-bindings)
 
 
 ## Install

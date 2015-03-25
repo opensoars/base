@@ -71,8 +71,7 @@ NAN_METHOD(B16){
   }
   else if(args[0]->IsObject()){
     Local<Object> array = args[0]->ToObject();
-    int byte_len = array->Get(
-        NanNew("byteLength"))->Uint32Value();
+    int byte_len = array->Get(NanNew("byteLength"))->Uint32Value();
 
     int i,
         h_i,   // half (byte) iterator
