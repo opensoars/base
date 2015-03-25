@@ -6,7 +6,7 @@
 [![Development Dependency Status](https://david-dm.org/opensoars/base/dev-status.svg?style=flat)](https://david-dm.org/opensoars/base#info=devDependencies&view=table)
 
 
-Base coversions.
+Base conversions.
 
 ---
 
