@@ -1,12 +1,13 @@
 var assert = require('assert');
 
-var base = require('./../../index.js'),
-    base10 = base[10];
+var base = require('./../../index.js');
 
 
 describe('base10', function (){
 
   describe('js', function (){
+    var base10 = base[10].js;
+
     describe('base2', function (){
       it('returns {string}1111 when arg1={int}15', function (){
         assert.equal(base10[2](15), '1111');

@@ -5,7 +5,6 @@ var base = require('./../../index.js');
 describe('base2', function (){
 
   describe('js', function (){
-
     var base2 = base[2].js;
 
     describe('base10', function (){
