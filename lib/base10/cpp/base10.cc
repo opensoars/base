@@ -17,7 +17,6 @@ NAN_METHOD(B2){
 
   unsigned int b10 = args[0]->Uint32Value();
   string b2 = "";
-  string new_b2 = "";
 
   while(b10 != 0){
     b2 = static_cast<ostringstream*>(
