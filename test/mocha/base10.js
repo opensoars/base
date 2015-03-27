@@ -56,6 +56,7 @@ describe('base10', function (){
         assert.equal(base10[2]('8098'), '1111110100010');
       });
     });
+    
     /*
     describe('base16', function (){
       it('returns {string}500f86 when arg1={int}5246854', function (){
