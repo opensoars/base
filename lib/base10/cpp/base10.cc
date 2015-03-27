@@ -30,6 +30,9 @@ NAN_METHOD(B2){
 
 NAN_METHOD(B16){
   NanScope();
+
+  unsigned int b10 = args[0]->Uint32Value();
+  string b16 = "";
 }
 
 
