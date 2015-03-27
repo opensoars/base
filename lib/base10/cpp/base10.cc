@@ -33,6 +33,18 @@ NAN_METHOD(B16){
 
   unsigned int b10 = args[0]->Uint32Value();
   string b16 = "";
+
+  float next_num;
+  int char_index;
+
+  while(b10 > 0){
+    next_num = b10 / 16.0; 
+    char_index = (next_num - floor(next_num)) * 16;
+    b16 = MAP16[char_index] + b16;
+    b10 = floor(next_num);
+  }
+
+  NanReturnValue(NanNew(b16));
 }
 
 
