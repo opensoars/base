@@ -22,9 +22,23 @@ NAN_METHOD(B2){
 NAN_METHOD(B10){
   NanScope();
 
-  cout << "b10" << endl;
+  unsigned int b10 = 0,
+      p;
 
-  NanReturnValue(NanNew("ok"));
+  int i;
+
+  if(args[0]->IsString()){
+    NanUtf8String js_str(args[0]);
+    const char* b16 = *js_str;
+
+    for(i = (strlen(b16) -1), p = 0; i > -1; i--, p++)
+      b10 += B16VALUE(b16[i]) * pow(16, p);
+  }
+  else if(args[0]->IsObject()){
+    // ...
+  }
+
+  NanReturnValue(NanNew(b10));
 }
 
 

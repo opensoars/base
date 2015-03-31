@@ -37,7 +37,7 @@ describe('base16', function (){
   describe('cpp', function (){
     if(base[16].cpp){
       var base16 = base[16].cpp;
-
+/*
       describe('base2', function (){
         it('returns {string}11111111 when arg1={string}ff', function (){
           assert.equal(base16[2]('ff'), '11111111');
@@ -46,7 +46,7 @@ describe('base16', function (){
           assert.equal(base16[2]('1575'), '1010101110101');
         });
       });
-
+*/
       describe('base10', function (){
         it('returns {int}65281 when arg1={string}ff01', function (){
           assert.equal(base16[10]('ff01'), 65281);
