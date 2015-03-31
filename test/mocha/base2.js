@@ -93,8 +93,10 @@ describe('base2', function (){
           catch(e){ assert.equal(e.message, 'expected data of type string|number|Uint8Array'); }
         });
       });
-
-
     }
+    else
+      it('sets cpp implementation to undefined when C++ isnt compiled', function (){
+        assert.equal(base[2].cpp, undefined);
+      });
   });
 });

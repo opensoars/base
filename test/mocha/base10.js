@@ -73,6 +73,11 @@ describe('base10', function (){
         });
       });
     }
+    else
+      it('sets cpp implementation to undefined when C++ isnt compiled', function (){
+        assert.equal(base[10].cpp, undefined);
+      });
+    
   });
 
 });
