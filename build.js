@@ -61,10 +61,10 @@ getCppDirs(function (err, dirs){
         console.log('--- exec error ' + i + ' ---\n'
           + err + '--- end exec error ---');
 
-      //console.log('--- stdout ' + i + ' ---\n'
-      //  + stdout + '--- end stdout ' + i + ' ---');
-      //console.log('--- stderr ' + i + ' ---\n'
-      //  + stderr + '--- end stderr ' + i + ' ---');
+      console.log('--- stdout ' + i + ' ---\n'
+        + stdout + '--- end stdout ' + i + ' ---');
+      console.log('--- stderr ' + i + ' ---\n'
+        + stderr + '--- end stderr ' + i + ' ---');
 
       build(i+=1);
     });
