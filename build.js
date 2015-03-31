@@ -14,7 +14,7 @@ function Err(msg, err){
 
 function build(dir){
 
-  var commands = 'cd ' + dir + ' && npm install';
+  var commands = 'cd ' + dir + ' && npm install && node-gyp configure && node-gyp build';
   
   exec(commands, function (err, stdout, stderr) {
     if(err)
