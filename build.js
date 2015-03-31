@@ -16,6 +16,8 @@ function build(dir){
 
   var commands = 'cd ' + dir + ' && npm install && node-gyp configure && node-gyp build';
   
+  console.log(commands);
+
   exec(commands, function (err, stdout, stderr) {
     if(err)
       console.log('--- exec error ---\n' + err + '--- end exec error ---');
