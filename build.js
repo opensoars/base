@@ -64,7 +64,7 @@ getCppDirs(function (err, dirs){
       console.log('--- stdout ' + i + ' ---\n'
         + stdout + '--- end stdout ' + i + ' ---');
       console.log('--- stderr ' + i + ' ---\n'
-        + stderr + '--- end stderr ' + i + ' ---');
+        + stderr + '--- end stderr ' + i + ' ---\n\n');
 
       build(i+=1);
     });
