@@ -11,10 +11,6 @@ function Err(msg, err){
   throw new Error(err_str);
 }
 
-/**
- * Lets do this synchronous
- */
-
 function getCppDirs(cb){
 
   var lib_dir = __dirname + '/lib';
@@ -54,8 +50,6 @@ getCppDirs(function (err, dirs){
 
     var commands = 'cd ' + dirs[i] + ' && npm install';
 
-    console.log(commands);
-
     exec(commands, function (err, stdout, stderr){
       if(err)
         console.log('--- exec error ' + i + ' ---\n'
@@ -66,8 +60,9 @@ getCppDirs(function (err, dirs){
       console.log('--- stderr ' + i + ' ---\n'
         + stderr + '--- end stderr ' + i + ' ---\n\n');
 
-      build(i+=1);
     });
+
+    build(i+=1);
 
   }(0));
 
