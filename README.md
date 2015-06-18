@@ -1,5 +1,6 @@
 # Base
 
+[![Inline docs](http://inch-ci.org/github/opensoars/base.svg?branch=master)](http://inch-ci.org/github/opensoars/base)
 [![Build Status](https://travis-ci.org/opensoars/base.svg)](https://travis-ci.org/opensoars/base)
 [![Coverage Status](https://coveralls.io/repos/opensoars/base/badge.svg?branch=master)](https://coveralls.io/r/opensoars/base?branch=master)
 [![Dependency Status](https://david-dm.org/opensoars/base.svg?style=flat)](https://david-dm.org/opensoars/base)
