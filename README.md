@@ -67,7 +67,3 @@ Example:
 
 ## Tests and coverage information
      npm run local_test
-     
-
-## Benchmarks
-    npm run bench
