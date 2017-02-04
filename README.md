@@ -2,6 +2,7 @@
 
 Base conversion CLI and API,using either a JS implementation or a C++ implementation.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/57b026719c044f96b172dda78540c094)](https://www.codacy.com/app/sam_1700/base?utm_source=github.com&utm_medium=referral&utm_content=opensoars/base&utm_campaign=badger)
 [![Inline docs](https://inch-ci.org/github/opensoars/base.svg?branch=master)](https://inch-ci.org/github/opensoars/base)
 [![Build Status](https://travis-ci.org/opensoars/base.svg)](https://travis-ci.org/opensoars/base)
 [![Coverage Status](https://coveralls.io/repos/opensoars/base/badge.svg?branch=master)](https://coveralls.io/r/opensoars/base?branch=master)
