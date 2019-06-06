@@ -1,6 +1,6 @@
 # Base
 
-Base conversion CLI and API,using either a JS implementation or a C++ implementation.
+Base conversion CLI and API, using either a JS or a C++ implementation.
 
 [![Inline docs](https://inch-ci.org/github/opensoars/base.svg?branch=master)](https://inch-ci.org/github/opensoars/base)
 [![Build Status](https://travis-ci.org/opensoars/base.svg)](https://travis-ci.org/opensoars/base)
